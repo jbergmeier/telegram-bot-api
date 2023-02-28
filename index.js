@@ -18,7 +18,7 @@ bot.command('temp', async (ctx, next) => {
   console.log('Response time: %sms', ms)
 })
 
-bot.command('tempKuehlschrank', async (ctx, next) => {
+bot.command('tempcooler', async (ctx, next) => {
     const start = new Date()
     next()
     await getFermenterTemperature().then((data) => {
