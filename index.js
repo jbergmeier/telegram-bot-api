@@ -21,7 +21,7 @@ bot.command('temp', async (ctx, next) => {
 bot.command('tempcooler', async (ctx, next) => {
     const start = new Date()
     next()
-    await getFermenterTemperature().then((data) => {
+    await getFridgeTemperature().then((data) => {
       const temp = "Kühlung Temp: " + data.toString() + "°C"
       console.log("data", data)
       ctx.telegram.sendMessage(ctx.message.chat.id, temp)
